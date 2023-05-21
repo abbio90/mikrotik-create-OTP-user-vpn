@@ -1,0 +1,9 @@
+{
+### modificare nome utente (es:   :local user "Giovanni" )
+:local user "user32"
+
+#----------NO MODIFY THIS SECTION----------
+
+:local otpPw ([/certificate scep-server otp generate minutes-valid=2 as-value]->"password")
+/ppp secret add name=$user password=$otpPw profile=OVPN-profile
+}
